@@ -61,11 +61,6 @@
       }
       
       </style>
-      <script>
-        function resizeIframe(obj) {
-          obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-        }
-      </script> 
   </head>
   <body>
   </body>
@@ -84,7 +79,8 @@
           name: 'frameTicket',
           id: 'frameTicket',
           src: iframesrc,
-          onload : "resizeIframe(this)"
+          sandbox : "allow-same-origin",
+          onload: "this.style.height=(this.contentWindow.document.body.scrollHeight)+'px';"
       }).appendTo('body');
     });
 
