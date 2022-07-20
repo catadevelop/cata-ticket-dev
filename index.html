@@ -79,10 +79,8 @@
           name: 'frameTicket',
           id: 'frameTicket',
           src: iframesrc,
-          onload: "this.style.height=(this.contentWindow.document.body.scrollHeight)+'px';"
+          style : "height:" + $(window).height() + "px;",
       }).appendTo('body');
     });
-
-    console.log(docURL);
   </script>
 </html>
