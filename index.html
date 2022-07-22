@@ -70,6 +70,7 @@
       var docURL = window.location.href ;
       var re = new RegExp('ticket.catamona.tw/#/(\\w+)/?');
       var match = docURL.match(re);
+      console.log(match);
 
       if ( match.length >=2 ){
         var iframesrc = 
