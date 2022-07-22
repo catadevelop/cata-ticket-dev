@@ -67,20 +67,25 @@
   <script>
     $(document).ready(function() {
       var docURL = window.location.href ;
-      var re = new RegExp('/#/(\\w+)/?');
-      var match = docURL.match(re); 
-      var iframesrc = 
+      var re = new RegExp('ticket.catamona.tw/#/(\\w+)/?');
+      var match = docURL.match(re);
+
+      if ( match.length >=2 ){
+        var iframesrc = 
         'https://script.google.com/macros/s/' +
         'AKfycbynUROkHI8Ufbj_VLL8qXBgjlrz6Lk8pe86kG-5509yvCq33Xt6G7Qrkk37Zv72YniCkA/exec?' +
         'queryHash=' + match[1] ;
 
-      $('<iframe />');  // Create an iframe element
-      $('<iframe />', {
-          name: 'frameTicket',
-          id: 'frameTicket',
-          src: iframesrc,
-          style : "height:" + $(window).height() + "px;",
-      }).appendTo('body');
+        $('<iframe />');  // Create an iframe element
+        $('<iframe />', {
+            name: 'frameTicket',
+            id: 'frameTicket',
+            src: iframesrc,
+            style : "height:" + $(window).height() + "px;",
+        }).appendTo('body');
+      }else{
+        $(location).prop('href', 'https://catamona.com');
+      }
     });
   </script>
 </html>
