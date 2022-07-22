@@ -70,9 +70,9 @@
       var docURL = window.location.href ;
       var re = new RegExp('ticket.catamona.tw/#/(\\w+)/?');
       var match = docURL.match(re);
-      console.log(match);
 
-      if ( match.length >=2 ){
+
+      if ( match ){
         var iframesrc = 
         'https://script.google.com/macros/s/' +
         'AKfycbynUROkHI8Ufbj_VLL8qXBgjlrz6Lk8pe86kG-5509yvCq33Xt6G7Qrkk37Zv72YniCkA/exec?' +
