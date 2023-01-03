@@ -68,15 +68,16 @@
   <script>
     $(document).ready(function() {
       var docURL = window.location.href ;
-      var re = new RegExp('catamona.tw/#/ticket/(\\w+)/?');
+      var re = new RegExp('catamona.tw/#/ticket/?');
       var match = docURL.match(re);
 
 
       if ( match ){
         var iframesrc = 
         'https://script.google.com/macros/s/' +
-        'AKfycbx2-PavmmnN_vTPZ8i5TVNoWLId-TDrk7_s4gv5bqVmDIg5MvBzW6z0ZVM0x-TmZ9W4FA/exec?' +
-        'queryHash=' + match[1] ;
+        'AKfycbxAC_-Sb5vqgiSPb9rjh5T2Uek9O9QBoLhDgm4pIj9zG7pIHR-5-XQ0I-13Guudelt0AQ/exec'
+         
+        //+ '?queryHash=' + match[1] ;
 
         $('<iframe />');  // Create an iframe element
         $('<iframe />', {
